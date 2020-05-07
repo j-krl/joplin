@@ -1072,6 +1072,16 @@ class Application extends BaseApplication {
 				label: _('&Tools'),
 				submenu: toolsItems,
 			},
+			window: {
+				label: _('&Window'),
+				submenu: [
+					{
+						label: _('Minimize'),
+						accelerator: 'CommandOrControl+M',
+						click: () => bridge().window().minimize(),
+					},
+				],
+			},
 			help: {
 				label: _('&Help'),
 				submenu: [{
@@ -1150,6 +1160,7 @@ class Application extends BaseApplication {
 			rootMenus.view,
 			rootMenus.note,
 			rootMenus.tools,
+			rootMenus.window,
 			rootMenus.help,
 		];
 

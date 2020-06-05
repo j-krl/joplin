@@ -367,6 +367,8 @@ function CodeMirror(props: NoteBodyEditorProps, ref: any) {
 		return output;
 	}, [styles.cellViewer, props.visiblePanes]);
 
+	const editorReadOnly = props.visiblePanes.indexOf('editor') < 0;
+
 	function renderEditor() {
 		return (
 			<div style={cellEditorStyle}>
@@ -408,6 +410,7 @@ function CodeMirror(props: NoteBodyEditorProps, ref: any) {
 				<Toolbar
 					theme={props.theme}
 					dispatch={props.dispatch}
+					disabled={editorReadOnly}
 				/>
 				{props.noteToolbar}
 			</div>

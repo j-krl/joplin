@@ -122,7 +122,7 @@ function Editor(props: EditorProps, ref: any) {
 			mode: props.mode,
 			readOnly: props.readOnly,
 			autoCloseBrackets: props.autoMatchBraces,
-			inputStyle: 'textarea', // contenteditable loses cursor position on focus change, use textarea instead
+			inputStyle: 'contenteditable', // contenteditable loses cursor position on focus change, use textarea instead
 			lineWrapping: true,
 			lineNumbers: false,
 			scrollPastEnd: true,

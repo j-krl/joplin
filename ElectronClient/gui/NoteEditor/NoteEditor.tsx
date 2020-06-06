@@ -521,7 +521,6 @@ function NoteEditor(props: NoteEditorProps) {
 		return renderNoNotes(styles.root);
 	}
 
-	// NOTE: Dis where the editor renders
 	return (
 		<div style={styles.root} onDrop={onDrop}>
 			<div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>

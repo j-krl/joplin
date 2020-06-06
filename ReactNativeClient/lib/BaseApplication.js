@@ -525,6 +525,7 @@ class BaseApplication {
 			ResourceFetcher.instance().autoAddResources();
 		}
 
+		// NOTE: the settings side effects happen.
 		if (action.type == 'SETTING_UPDATE_ONE') {
 			await this.applySettingsSideEffects(action);
 		} else if (action.type == 'SETTING_UPDATE_ALL') {

@@ -50,6 +50,7 @@ class ElectronAppWrapper {
 			defaultWidth: Math.round(0.8 * screen.getPrimaryDisplay().workArea.width),
 			defaultHeight: Math.round(0.8 * screen.getPrimaryDisplay().workArea.height),
 			file: `window-state-${this.env_}.json`,
+			spellcheck: true,
 		};
 
 		if (this.profilePath_) stateOptions.path = this.profilePath_;

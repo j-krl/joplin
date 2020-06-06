@@ -650,15 +650,25 @@ class Application extends BaseApplication {
 		}]);
 
 		// the following menu items will be available for all OS under Tools
-		const toolsItemsAll = [{
-			label: _('Note attachments...'),
-			click: () => {
-				this.dispatch({
-					type: 'NAV_GO',
-					routeName: 'Resources',
-				});
+		const toolsItemsAll = [
+			{
+				label: Setting.settingMetadata('spellcheck').label(),
+				type: 'checkbox',
+				checked: Setting.value('spellcheck'),
+				screens: ['Main'],
+				click: () => {
+					Setting.setValue('spellcheck', !Setting.value('spellcheck'));
+				},
+			}, {
+				label: _('Note attachments...'),
+				click: () => {
+					this.dispatch({
+						type: 'NAV_GO',
+						routeName: 'Resources',
+					});
+				},
 			},
-		}];
+		];
 
 		if (!shim.isMac()) {
 			toolsItems = toolsItems.concat(toolsItemsWindowsLinux);

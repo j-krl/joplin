@@ -656,6 +656,7 @@ class Application extends BaseApplication {
 				type: 'checkbox',
 				checked: Setting.value('spellcheck'),
 				screens: ['Main'],
+				accelerator: 'CommandOrControl+Alt+L',
 				click: () => {
 					Setting.setValue('spellcheck', !Setting.value('spellcheck'));
 				},

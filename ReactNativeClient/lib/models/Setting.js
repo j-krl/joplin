@@ -243,7 +243,6 @@ class Setting extends BaseModel {
 					return options;
 				},
 			},
-			// NOTE: Spellcheck settings option
 			spellcheck: {
 				value: true,
 				type: Setting.TYPE_BOOL,
@@ -846,7 +845,6 @@ class Setting extends BaseModel {
 
 				c.value = value;
 
-				// NOTE: dispatch of the spellcheck setting update
 				this.dispatch({
 					type: 'SETTING_UPDATE_ONE',
 					key: key,
